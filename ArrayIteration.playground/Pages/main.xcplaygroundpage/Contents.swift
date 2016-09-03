@@ -16,8 +16,7 @@
 // write your code here
 
 
-
-
+var cartContent: [String] = ["Chips", "Salsa", "Guacamole","Red wine"]
 
 
 /*: question2
@@ -27,8 +26,7 @@
 
 
 
-
-
+var cartNums: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9 ,10]
 
 
 /*: question3
@@ -39,6 +37,10 @@
 
 
 
+for cartNum in cartNums {
+    
+    print(cartNum)
+}
 
 
 
@@ -47,7 +49,9 @@
  */
 // write your code here
 
-
+for item in cartContent {
+    print ("sale "+item)
+}
 
 
 
@@ -58,9 +62,13 @@
  */
 // write your code here
 
+func printCartItems(){
+    for item in cartContent {
+        print (item)
+    }
+}
 
-
-
+printCartItems()
 
 
 
@@ -68,7 +76,14 @@
  ### 4. Create a function that takes an array of names and greets each person with the following message "Good morning x" <- x being the individuals name. One caveat. If the persons first name is Michael, we want to greet them with the message, "Top of the morning Michael!".
  */
 // write your code here
-
+func morningGreet(phrase: [String]) {
+    for name in phrase {
+        print ("Good morning"+name)
+        if name == "Michael" {
+        print("Top of the morning Michael!")
+    }
+}
+}
 
 
 
@@ -79,10 +94,16 @@
  */
 // write your code here
 
+let group: [Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
+var lessThanFifty: [Int] = []
 
-
-
-
-
-
-
+func findLessThanFifty(numbers: [Int]) -> [Int] {
+    for num in numbers {
+        if num < 50 {
+           lessThanFifty.append(num)
+        }
+    
+}
+return lessThanFifty
+}
+findLessThanFifty(group)
